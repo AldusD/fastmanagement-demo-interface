@@ -13,11 +13,11 @@ div {
         width: 30vw;
         border-radius: 3vh;
         background-color: #444;
-        margin: 6vh 0;
+        margin: clamp(20px, 3vh, 10vh) 0;
 
         span {
             color: white;
-            font-size: 1rem;
+            font-size: clamp(10px, 0.8rem, 7vh);
             font-weight: bold;
         }
     }
@@ -26,5 +26,9 @@ div {
         color: black;
         border: solid 2px white;
         background-color: black;
+    }
+
+    a {
+        text-decoration: none;
     }
 }

@@ -7,10 +7,9 @@ import { ViewComponent } from './pages/view/view.component';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', component: InitialPageComponent },
-  { path: 'application/new', component: ApplicationFormComponent, children: [
-    { path: 'results', component: ResultsComponent },
-    { path: 'view', component: ViewComponent },
-  ]},
+  { path: 'application/new', component: ApplicationFormComponent },
+  { path: 'view', component: ViewComponent },
+  { path: 'results', component: ResultsComponent },
   { path: '**', redirectTo: ""},
 ];
 

@@ -9,7 +9,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ApplicationFormComponent } from './pages/application-form/application-form.component';
 import { ResultsComponent } from './pages/results/results.component';
 import { ViewComponent } from './pages/view/view.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     ApplicationFormComponent,
     ResultsComponent,
     ViewComponent,
-    NotFoundComponent
   ],
   imports: [
     BrowserModule,
