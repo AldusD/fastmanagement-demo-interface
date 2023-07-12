@@ -6,9 +6,9 @@
         <div><span>Qualified</span></div>
         <div><span>Approved</span></div>
     </div>
-    <div class="candidates">
+    <div class="candidates" *ngfor="let application of applications">
         <div>
-            <span>John - Received</span>
+            <span>{{application.name}} - {{application.status}}</span>
             <div class="options">
                 <div>Advance</div>
                 <div>X</div>
