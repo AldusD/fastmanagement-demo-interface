@@ -1,0 +1,37 @@
+.container {
+    margin-top: 20vh;
+    h1 {
+        color: whitesmoke;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .list {
+        display: flex;
+        justify-content: center;
+        background-color: #000;
+        height: 40vh;
+        width: 50vw;
+        border-radius: 2vh;
+        padding: 2vh 0.6rem;
+
+        div {
+            display: flex;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            background-color: #AAA;
+            color: black;
+            height: 5vh;
+            border-radius: 1vh;
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        > div:hover {
+            background-color: #FFBA00;
+        }
+    }
+}
