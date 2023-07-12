@@ -1,0 +1,22 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    background-color: #FFBA00;
+    width: 100vw;
+    height: 7vh;
+
+    span, a {
+        color: #DDD;
+        font-weight: bold;
+        font-size: clamp(1px, 1rem, 4vh);
+    }
+
+    a {
+        text-decoration: none;        
+    }
+}

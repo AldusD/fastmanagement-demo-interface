@@ -1,0 +1,23 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: #FFBA00;
+    width: 100vw;
+    height: 10vh;
+
+    span, a {
+        color: #EEE;
+        font-weight: bold;
+        font-family: 'roboto';
+        font-size: clamp(1px, 1.4rem, 4vh);
+    }
+
+    a {
+        text-decoration: none;        
+    }
+}

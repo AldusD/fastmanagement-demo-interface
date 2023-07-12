@@ -1,0 +1,30 @@
+div {
+    margin-top: 14vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .menu-item {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        width: 30vw;
+        border-radius: 3vh;
+        background-color: #444;
+        margin: 6vh 0;
+
+        span {
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+
+    .menu-item:hover {
+        color: black;
+        border: solid 2px white;
+        background-color: black;
+    }
+}
