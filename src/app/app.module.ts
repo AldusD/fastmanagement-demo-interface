@@ -10,6 +10,8 @@ import { ApplicationFormComponent } from './pages/application-form/application-f
 import { ResultsComponent } from './pages/results/results.component';
 import { ViewComponent } from './pages/view/view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { FilterByPipe } from './filter-by.pipe';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { HttpClientModule } from '@angular/common/http';
     ApplicationFormComponent,
     ResultsComponent,
     ViewComponent,
+    FilterByPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

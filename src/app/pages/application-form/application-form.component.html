@@ -1,5 +1,5 @@
 <div>
     <h1>Insert Candidate Name</h1>
-    <input placeholder="name" />
-    <button>Sign Applicantion</button>
+    <input placeholder="name" [(ngModel)]="name" />
+    <button (click)="sendApplication()" >Sign Applicantion</button>
 </div>

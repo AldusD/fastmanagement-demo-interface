@@ -1,17 +1,17 @@
 <div class="container">
     <h1>Candidates</h1>
     <div class="buttons">
-        <div><span>All</span></div>
-        <div><span>Received</span></div>
-        <div><span>Qualified</span></div>
-        <div><span>Approved</span></div>
+        <div (click)="selectFilter()" [class.selected]="filterByStatus==''" ><span>All</span></div>
+        <div (click)="selectFilter('RECEBIDO')" [class.selected]="filterByStatus=='RECEBIDO'" ><span>Received</span></div>
+        <div (click)="selectFilter('QUALIFICADO')" [class.selected]="filterByStatus=='QUALIFICADO'"><span>Qualified</span></div>
+        <div (click)="selectFilter('APROVADO')" [class.selected]="filterByStatus=='APROVADO'" ><span>Approved</span></div>
     </div>
-    <div class="candidates" *ngfor="let application of applications">
-        <div>
+    <div class="candidates">
+        <div *ngFor="let application of applications | filterBy: filterByStatus">
             <span>{{application.name}} - {{application.status}}</span>
             <div class="options">
-                <div>Advance</div>
-                <div>X</div>
+                <div (click)="advance(application)" >Advance</div>
+                <div (click)="end(application)" >X</div>
             </div>
         </div>
     </div>

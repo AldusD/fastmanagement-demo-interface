@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Application } from 'src/app/models/Application';
+import { ApplicationsServiceService } from 'src/app/services/applications-service.service';
 
 @Component({
   selector: 'app-view',
@@ -8,9 +9,39 @@ import { Application } from 'src/app/models/Application';
 })
 
 export class ViewComponent {
-  applications: Application[] = [
-    { name: "john", status: "Recebido", id: 1 }, { name: "Maria", status: "Aprovado", id: 2 }, { name: "Carlos", status: "Qualificado", id: 2 }
-  ];
+  applications: Application[] = [];
 
-  constructor() {}
+  constructor(private applicationsService: ApplicationsServiceService) {}
+  
+  filterByStatus: string = "";
+
+  ngOnInit(): void {
+    this.getApplications();
+  }
+
+  getApplications() {
+    this.applicationsService.list().subscribe((res) => {
+      this.applications = res.application;
+    })
+  }
+
+  advance(app: Application) {
+    if (app.status === "APROVADO") return;
+    if (app.status === "RECEBIDO") {
+      this.applicationsService.schedule(app.id).subscribe(() => this.getApplications());
+      return;
+    }
+    if (app.status === "QUALIFICADO") {
+      this.applicationsService.approve(app.id).subscribe(() => this.getApplications());
+    }
+    return;
+  }
+
+  end(app: Application) {
+    this.applicationsService.disqualify(app.id).subscribe(() => this.getApplications());
+  }
+
+  selectFilter(option?: string) {
+    this.filterByStatus = option || "";
+  }
 }

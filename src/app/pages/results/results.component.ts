@@ -16,9 +16,8 @@ export class ResultsComponent implements OnInit {
   }
 
   getApplications() {
-    this.applicationsService.list().subscribe((res) => {
-      this.approved = res;
+    this.applicationsService.listApproved().subscribe((res) => {
+      this.approved = res.approved;
     })
   }
-
 }
