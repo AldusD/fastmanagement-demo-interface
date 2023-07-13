@@ -9,6 +9,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ApplicationFormComponent } from './pages/application-form/application-form.component';
 import { ResultsComponent } from './pages/results/results.component';
 import { ViewComponent } from './pages/view/view.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { FilterByPipe } from './filter-by.pipe';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,13 @@ import { ViewComponent } from './pages/view/view.component';
     ApplicationFormComponent,
     ResultsComponent,
     ViewComponent,
+    FilterByPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
