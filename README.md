@@ -1,6 +1,6 @@
 # Fast Management demo Interface
 
-[Leia esta página em português](https://github.com/AldusD/fastmanagement-demo-api/blob/main/README-pt.md)
+[Leia esta página em português](https://github.com/AldusD/fastmanagement-demo-interface/blob/main/README-pt.md)
 
 [App Deploy](https://fastmanagement-demo-interface.vercel.app/) [|](https://github.com/AldusD/fastmanagement-demo-interface) [Backend Repository](https://github.com/AldusD/fastmanagement-demo-api)
 
