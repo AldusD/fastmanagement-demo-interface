@@ -1,4 +1,16 @@
-# FastmanagementInterface
+# Fast Management demo Interface
+
+[Leia esta página em português](https://github.com/AldusD/fastmanagement-demo-api/blob/main/README-pt.md)
+
+[App Deploy](https://fastmanagement-demo-interface.vercel.app/) [|](https://github.com/AldusD/fastmanagement-demo-interface) [Backend Repository](https://github.com/AldusD/fastmanagement-demo-api)
+
+Fast Management: Smart choices, fast resolution 
+
+## About
+Fast Management is a clean app used to decide between candidates. This project was used to consolidating the knowledge in the following technologies:
+- Angular Basics
+- Reactive progamming and Observables
+- Interacting with an API with Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
